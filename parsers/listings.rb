@@ -19,6 +19,9 @@ listings.each do |listing|
     item_link = listing.at_css('a.s-item__link')
     product['url'] = item_link['href'] unless item_link.nil?
 
+    item_img = listing.at_css('img.s-item__image-img')
+    product['img_src'] = item_img['src'] unless item_img.nil?
+
     # specify the collection where this record will be stored
     product['_collection'] = "listings"
 
@@ -28,10 +31,12 @@ listings.each do |listing|
     # enqueue more pages to the scrape job
     pages << {
         url: product['url'],
-        page_type: 'listings',
+        page_type: 'details',
         vars: {  # adding vars to this page
             title: product['title'],
-            price: product['price']
+            price: product['price'],
+            img_src: product['img_src']
         }
     }
+    puts pages
 end
