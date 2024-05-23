@@ -38,5 +38,5 @@ listings.each do |listing|
             img_src: product['img_src']
         }
     }
-    puts pages
+    # puts pages
 end

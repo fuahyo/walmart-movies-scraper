@@ -23,4 +23,4 @@ outputs << {
 #LISTING_FRAME_MODULE > div > div.d-stores-info-categories__container > div.d-stores-info-categories__container__info__section
 #LISTING_FRAME_MODULE > div > div.d-stores-info-categories__container > div.d-stores-info-categories__container__info__section > div:nth-child(2)
 #LISTING_FRAME_MODULE > div > div.d-stores-info-categories__container > div.d-stores-info-categories__container__info__section > h2
-puts outputs
+# puts outputs
