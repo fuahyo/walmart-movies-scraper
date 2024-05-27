@@ -8,5 +8,5 @@ parsers:
   - page_type: details
     file: ./parsers/products.rb
     disabled: false
-# exporters:
-#   - file: ./exporters/products_json.yaml 
+exporters:
+  - file: ./exporters/products_json.yaml 
